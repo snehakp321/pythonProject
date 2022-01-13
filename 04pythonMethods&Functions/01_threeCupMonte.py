@@ -4,7 +4,6 @@ example = [1, 2, 3, 4, 5, 6, 7]
 shuffle(example)
 print(example)
 
-
 def shufflelist(mylist):
     shuffle(mylist)
     return mylist
