@@ -27,4 +27,4 @@ def bruteforcemethod(nums, target):
 nums = [2, 7, 11, 15]
 target = 9
 print(bruteforcemethod(nums, target))
-#  time complexity of the above solution is O(n2)
+# time complexity of the above solution is O(n2)
