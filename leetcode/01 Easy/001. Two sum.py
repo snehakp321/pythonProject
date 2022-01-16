@@ -29,6 +29,23 @@ target = 9
 print(bruteforcemethod(nums, target))
 # time complexity of the above solution is O(n2)
 
+def twopasshashtable(nums, target):
+    hashmap={}
+    for i in range(len(nums)):
+        hashmap[nums[i]]=i
+    for i in range(len(nums)):
+        complement=target-nums[i]
+        if complement in hashmap and hashmap[complement]!=i:
+            return [i,hashmap[complement]]
+nums = [2, 7, 11, 15]
+target = 9
+print(twopasshashtable(nums, target))
+
+# Time complexity: O(n)O(n). We traverse the list containing nn elements exactly twice.
+# Since the hash table reduces the lookup time to O(1)O(1), the overall time complexity is O(n)O(n).
+#
+# Space complexity: O(n)O(n). The extra space required depends on the number of items stored in the hash table, which stores exactly nn elements.
+
 def onepasshashtablemethod(nums,target):
     hash_table={}
     for i in range(len(nums)):
@@ -41,5 +58,11 @@ def onepasshashtablemethod(nums,target):
 nums = [2, 7, 11, 15]
 target = 9
 print(onepasshashtablemethod(nums, target))
+
+# Time complexity: O(n)O(n). We traverse the list containing nn elements only once. Each lookup in the table costs only O(1)O(1) time.
+#
+# Space complexity: O(n)O(n). The extra space required depends on the number of items stored in the hash table, which stores at most nn elements.
+
+
 
 
