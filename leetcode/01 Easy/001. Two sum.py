@@ -28,3 +28,18 @@ nums = [2, 7, 11, 15]
 target = 9
 print(bruteforcemethod(nums, target))
 # time complexity of the above solution is O(n2)
+
+def twopasshashtablemethod(nums,target):
+    hash_table={}
+    for i in range(len(nums)):
+        complement = target-nums[i]
+        if complement not in hash_table:
+            hash_table[nums[i]] = i
+        else:
+            return [hash_table[complement], i]
+
+nums = [2, 7, 11, 15]
+target = 9
+print(twopasshashtablemethod(nums, target))
+
+
