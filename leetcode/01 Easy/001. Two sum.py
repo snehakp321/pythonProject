@@ -29,7 +29,7 @@ target = 9
 print(bruteforcemethod(nums, target))
 # time complexity of the above solution is O(n2)
 
-def twopasshashtablemethod(nums,target):
+def onepasshashtablemethod(nums,target):
     hash_table={}
     for i in range(len(nums)):
         complement=target-nums[i]
@@ -40,6 +40,6 @@ def twopasshashtablemethod(nums,target):
 
 nums = [2, 7, 11, 15]
 target = 9
-print(twopasshashtablemethod(nums, target))
+print(onepasshashtablemethod(nums, target))
 
 
