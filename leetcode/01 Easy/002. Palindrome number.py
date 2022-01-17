@@ -11,10 +11,7 @@
 # Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
 
 def isPalindrome(x):
-        st1=str(x)
-        st2=str(x)
-        st2=st2[::-1]
-        return st2==st1
+        return str(x)==str(x)[::-1]
 
 print(isPalindrome(121))
 print(isPalindrome(1231))
